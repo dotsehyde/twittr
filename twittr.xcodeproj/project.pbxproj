@@ -15,6 +15,9 @@
 		301BA88927E7C201001A3C3A /* TweetBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BA88827E7C201001A3C3A /* TweetBox.swift */; };
 		301BA88C27E7C78B001A3C3A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BA88B27E7C78B001A3C3A /* HomeView.swift */; };
 		301BA89327E7CD2E001A3C3A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BA89227E7CD2E001A3C3A /* ProfileView.swift */; };
+		304F5F1427E8780A0010F309 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F5F1327E8780A0010F309 /* SearchView.swift */; };
+		304F5F1927E878440010F309 /* UserBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F5F1827E878440010F309 /* UserBoxView.swift */; };
+		30AE14D027E86DBC004083D8 /* TweetFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE14CF27E86DBC004083D8 /* TweetFilterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		301BA88827E7C201001A3C3A /* TweetBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetBox.swift; sourceTree = "<group>"; };
 		301BA88B27E7C78B001A3C3A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		301BA89227E7CD2E001A3C3A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		304F5F1327E8780A0010F309 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		304F5F1827E878440010F309 /* UserBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBoxView.swift; sourceTree = "<group>"; };
+		30AE14CF27E86DBC004083D8 /* TweetFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,8 @@
 		301BA87F27E7BFAC001A3C3A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				304F5F1227E877F70010F309 /* Models */,
+				304F5F1127E877F30010F309 /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 		301BA88227E7BFE3001A3C3A /* views */ = {
 			isa = PBXGroup;
 			children = (
+				301BA88427E7C04F001A3C3A /* BottomNavView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -139,7 +148,7 @@
 		301BA88327E7BFF3001A3C3A /* widgets */ = {
 			isa = PBXGroup;
 			children = (
-				301BA88427E7C04F001A3C3A /* BottomNavView.swift */,
+				304F5F1827E878440010F309 /* UserBoxView.swift */,
 				301BA88827E7C201001A3C3A /* TweetBox.swift */,
 			);
 			path = widgets;
@@ -156,6 +165,7 @@
 		301BA89027E7CD18001A3C3A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				30AE14CE27E86D86004083D8 /* Models */,
 				301BA89127E7CD1D001A3C3A /* Views */,
 			);
 			path = Profile;
@@ -167,6 +177,29 @@
 				301BA89227E7CD2E001A3C3A /* ProfileView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		304F5F1127E877F30010F309 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				304F5F1327E8780A0010F309 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		304F5F1227E877F70010F309 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30AE14CE27E86D86004083D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30AE14CF27E86DBC004083D8 /* TweetFilterModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +273,11 @@
 			files = (
 				301BA86F27E7BF12001A3C3A /* ContentView.swift in Sources */,
 				301BA86D27E7BF12001A3C3A /* twittrApp.swift in Sources */,
+				304F5F1927E878440010F309 /* UserBoxView.swift in Sources */,
 				301BA88527E7C04F001A3C3A /* BottomNavView.swift in Sources */,
 				301BA88C27E7C78B001A3C3A /* HomeView.swift in Sources */,
+				304F5F1427E8780A0010F309 /* SearchView.swift in Sources */,
+				30AE14D027E86DBC004083D8 /* TweetFilterModel.swift in Sources */,
 				301BA89327E7CD2E001A3C3A /* ProfileView.swift in Sources */,
 				301BA88927E7C201001A3C3A /* TweetBox.swift in Sources */,
 			);

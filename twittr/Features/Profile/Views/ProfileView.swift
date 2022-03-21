@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var sFilter:TweetFilterModel=TweetFilterModel.tweets
+    @Namespace var animation
     var body: some View {
         VStack(alignment: .leading){
             headerView
             actionButton
             userInfo
-            ScrollView{
-                LazyVStack{
-                    
-                }
-            }
+            filterBar
+           tweetView
             Spacer()
         }
     }
@@ -37,7 +36,7 @@ extension ProfileView{
             VStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image(systemName: "arrow.backward").resizable().foregroundColor(.white).frame(width: 20, height: 16)
-                        .offset(x: 16, y: 12)
+                        .offset(x: 5, y: 0)
                 })
                 Circle().frame(width: 72, height: 72).offset(x: 16, y: 24)
             }
@@ -95,5 +94,45 @@ extension ProfileView{
                 }
             }.padding(.vertical)
         }.padding(.horizontal)
+    }
+    
+    var filterBar: some View{
+        HStack{
+            ForEach(TweetFilterModel.allCases,id:\.rawValue){ item in
+                VStack{
+                Text(item.title)
+                    .font(.subheadline)
+                    .fontWeight(sFilter == item ? .semibold : .regular)
+                    .foregroundColor(sFilter == item ? .black : .gray)
+                if(sFilter == item){
+                    Capsule()
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .frame(height:3).matchedGeometryEffect(id: "filter", in: animation)
+                }else{
+                    Capsule()
+                    .foregroundColor(.clear)
+                        .frame(height:3)
+                }
+                    
+                }
+                .onTapGesture{
+                    withAnimation(.easeInOut){
+                        self.sFilter=item
+                    }
+                }
+                
+            }
+        }
+        .overlay(Divider().offset(x:0,y:16))
+    }
+    
+    var tweetView: some View{
+        ScrollView{
+            LazyVStack{
+                ForEach(0 ... 20, id:\.self){_ in
+                    TweetBox()
+                }
+            }
+        }
     }
 }
