@@ -8,33 +8,33 @@
 import SwiftUI
 
 struct BottomNavView: View {
-    @State var index=0;
+    @State var index = 0;
     var body: some View {
         TabView(selection: $index,
-                content:  {
+                content: {
                     HomeView().onTapGesture {
-                        self.index=0
+                        self.index = 0
                     }.tabItem {
-                        VStack{
+                        VStack {
                             Image(systemName: "house")
                             Text("Home")
                         } }.tag(0)
-                    ProfileView().onTapGesture {
-                        self.index=1
+                    ExploreView().onTapGesture {
+                        self.index = 1
                     }.tabItem {
-                        VStack{Image(systemName: "magnifyingglass")
+                        VStack { Image(systemName: "magnifyingglass")
                             Text("Search")
                         } }.tag(1)
                     Text("Notification").onTapGesture {
-                        self.index=2
+                        self.index = 2
                     }.tabItem {
-                        VStack{Image(systemName: "bell")
+                        VStack { Image(systemName: "bell")
                             Text("Notification")
                         } }.tag(2)
                     Text("Message").onTapGesture {
-                        self.index=3
+                        self.index = 3
                     }.tabItem {
-                        VStack{Image(systemName: "envelope")
+                        VStack { Image(systemName: "envelope")
                             Text("Message")
                         } }.tag(3)
                 })

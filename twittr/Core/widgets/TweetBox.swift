@@ -58,6 +58,6 @@ struct TweetBox: View {
 
 struct tweetBox_Previews: PreviewProvider {
     static var previews: some View {
-        TweetBox()
+        TweetBox().previewLayout(.sizeThatFits)
     }
 }

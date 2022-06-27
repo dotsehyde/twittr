@@ -11,7 +11,10 @@ import SwiftUI
 struct twittrApp: App {
     var body: some Scene {
         WindowGroup {
-            BottomNavView()
+            NavigationView {
+                ContentView()
+                    
+            }
         }
     }
 }
